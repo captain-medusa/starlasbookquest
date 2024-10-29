@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebel Queen Starla's Bookquest</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        p {
+            font-size: 1.5em;
+            color: #666;
+        }
+        .countdown {
+            font-size: 2em;
+            color: #ff6347;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rebel Queen Starla's Bookquest</h1>
+    <p>Le jeu sera disponible pour les Utopiales à partir du mercredi 30 octobre !</p>
+    <p>Préparez-vous pour une aventure littéraire sans précédent.</p>
+    
+    <div class="countdown" id="countdown"></div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 30, 2024 00:00:00").getTime();
+
+        // Update the countdown every second
+        var countdownFunction = setInterval(function() {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the time difference between now and the countdown date
+            var timeRemaining = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + " jours " + hours + " heures " 
+            + minutes + " minutes " + seconds + " secondes ";
+
+            // If the countdown is finished, display a message
+            if (timeRemaining < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "Le jeu est maintenant disponible !";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
