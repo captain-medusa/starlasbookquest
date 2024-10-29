@@ -13,4 +13,4 @@ Octavia Butler’s Bloodchild is a compelling science fiction novella about the 
 - Winner of the 1985 Nebula Award for Best Novelette
 - Winner of the 1985 Locus Award for Best Novelette
 
-le site d'Octavia E. Butler : [https://www.octaviabutler.com](https://www.octaviabutler.com)
+Octavia E. Butler's website : [https://www.octaviabutler.com](https://www.octaviabutler.com)

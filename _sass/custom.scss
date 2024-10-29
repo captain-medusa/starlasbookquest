@@ -19,7 +19,9 @@
 .font-small {
     font-size: var(--step--1);
 }
-
+span.highlight {
+    background-color: $highlight-color;
+}
 .float {
     @media all and (max-width: 40rem) {
         display: grid;
