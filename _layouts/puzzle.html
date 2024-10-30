@@ -16,16 +16,14 @@ layout: default
   </div>
   <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
 </section>
+{% assign page-number = page.number %}
+{% assign page-lang = page.lang %}
+{% include book.html page-number = page-number page-lang = page-lang %}
 
 {% assign filtered_posts_lang = site.posts | where: 'lang', page.lang %}
 {% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
 {% include filtered-posts.html puzzle_posts = filtered_posts_puzzle %}
 {% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
-
-{% assign page-number = page.number %}
-{% assign page-lang = page.lang %}
-{% include book.html page-number = page-number page-lang = page-lang %}
-
 
 <section class="pagination">
   {% if page.previous-page %}
