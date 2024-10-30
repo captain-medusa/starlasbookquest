@@ -1,0 +1,8 @@
+<div class="grid grid-1-to-3up grid-1-to-4up grid-1-to-5up">
+{% for book in site.data.butler-books.en %}
+<div>
+    <img src="{{ book.img-url | absolute_url }}" alt="">
+    <figcaption>{{ book.fig }}</figcaption>
+</div>
+{% endfor %}
+</div>

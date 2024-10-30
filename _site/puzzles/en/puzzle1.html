@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Cosy Crew - Rebel Queen Starla’s Bookquest</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+  </head>
+  <body>
+    <header>
+    <img class="bg-color-primary border-bottom" src="http://localhost:4000/assets/images/bookcase.svg" alt="">
+    <div class="grid no-gap bg-color-primary">
+        <h1><a href="http://localhost:4000/">Rebel Queen Starla’s Bookquest</a></h1>
+        <nav class="flex-space-between">
+  <div>
+        
+        <a href="http://localhost:4000/en/home">
+          Home
+        </a>
+        
+
+      <a href="http://localhost:4000/about" >
+        
+        About
+        
+      </a>
+  </div>
+  <div>
+    
+    
+
+    
+
+    <!-- Display the link if the other language URL was found -->
+    
+        <a href="http://localhost:4000/puzzles/fr/puzzle1.html">
+            
+                Français
+            
+        </a>
+    
+  </div>
+</nav>
+    </div>
+</header>
+    <main class="grid">
+      <h3>Cosy Crew</h3>
+
+<section class="visible lock-section" id="lock-section1">
+  
+  <p>Find the password to unlock a new book in Starla's library</p>
+  
+  <p>An author - 8 letters</p>
+  <div class="grid grid-2up">
+    <input type="text" id="password-input1" placeholder="Enter password">
+    <button class="button" onclick="unlockPage('1', 'chambers')">Unlock</button>
+  </div>
+  <p id="error-message1" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
+</section>
+
+
+
+
+<section>
+  <h4>My favorite crew : Can You Guess the Characters?</h4>
+  <div><p>You know how hard it can be to picture a beloved character when reading a book, right? I’ve definitely had my share of mental blocks, and I often end up searching for fan art to help bring them to life. (Though, I’ll admit, I’ve accidentally spoiled a few surprises doing that in the past!)</p>
+
+<p>Fortunately, the fan art I’m sharing below is spoiler-free, and I’m thrilled to introduce you to one of my favorite cozy sci-fi space crews. Can you match each character with their description? Just a heads-up, the descriptions come from the books, but these fan arts are the artists’ interpretations—so they’re not 100% true to the text.</p>
+
+<p><span class="highlight">In my favorite piece, Cain has a beard, Robin is wearing his glasses, and Marirose is in a yellow top.</span></p>
+
+<p><span class="highlight">I’ve changed the characters’ names so that, put in the correct order, they reveal the name of their author.</span></p>
+
+<div class="grid grid-1-to-3up grid-1-to-4up">
+    
+
+    <!-- Assign the correct data based on the language -->
+    
+
+    <!-- Loop through the crew data -->
+    
+        <div>
+            <h5>Arzt</h5>
+            <ul>
+                
+                    <li class="font-small">Balloon-like cheeks</li>
+                
+                    <li class="font-small">six limbs</li>
+                
+                    <li class="font-small">Wears a short-sleeve shirt with a green logo and pants</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Elsix</h5>
+            <ul>
+                
+                    <li class="font-small">Lithe and lean, with moss green scales fading into a paler shade over her belly</li>
+                
+                    <li class="font-small">No nose, no lips, no ears</li>
+                
+                    <li class="font-small">Multicolored feathered mane</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Heloïse</h5>
+            <ul>
+                
+                    <li class="font-small">Black hair tied in a bun with a ribbon</li>
+                
+                    <li class="font-small">Wears an orange jumpsuit</li>
+                
+                    <li class="font-small">Hasty handwritten notes scribbled on the sleeves</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Robin</h5>
+            <ul>
+                
+                    <li class="font-small">Practically pink</li>
+                
+                    <li class="font-small">Male</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>San</h5>
+            <ul>
+                
+                    <li class="font-small">Walks on all fours with long fingers</li>
+                
+                    <li class="font-small">Back bowed, covered in ice-blue fur</li>
+                
+                    <li class="font-small">Enormous, long-lashed wet eyes</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Cain</h5>
+            <ul>
+                
+                    <li class="font-small">Small and stocky</li>
+                
+                    <li class="font-small">Side of his head shaved, with a tuft of curls atop his scalp</li>
+                
+                    <li class="font-small">Tatoos and piercings</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Bobby</h5>
+            <ul>
+                
+                    <li class="font-small">Tight black curls</li>
+                
+                    <li class="font-small">Amber skin</li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>Marirose</h5>
+            <ul>
+                
+                    <li class="font-small">Copper skin, lighter than Cain</li>
+                
+                    <li class="font-small">A head smaller than Elsix</li>
+                
+                    <li class="font-small">Curly brown hair</li>
+                
+            </ul>
+        </div>
+    
+</div>
+
+<div class="wrapper-grid col-1">
+  
+  <div>
+    <img srcset="
+    http://localhost:4000/assets/images/crew/wayfarer1-sm.jpg  640w,
+    http://localhost:4000/assets/images/crew/wayfarer1-md.jpg  768w,
+    http://localhost:4000/assets/images/crew/wayfarer1-lg.jpg  1024w,
+    " sizes="(max-width: 640px) 100vw,
+          (max-width: 768px) 100vw, 
+          1024px" src="http://localhost:4000/assets/images/crew/wayfarer1-lg.jpg" alt="équipage du wayfarer" />
+    <figcaption>@alePresser <a href="alepresser.com">alepresser.com</a></figcaption>
+  </div>
+
+  <div>
+    <img srcset="
+      http://localhost:4000/assets/images/crew/wayfarer3-sm.jpg  640w,
+      http://localhost:4000/assets/images/crew/wayfarer3-md.jpg  768w,
+      http://localhost:4000/assets/images/crew/wayfarer3-lg.jpg  1024w,
+    " sizes="(max-width: 640px) 100vw,
+          (max-width: 768px) 100vw, 
+          1024px" src="http://localhost:4000/assets/images/crew/wayfarer3-lg.jpg" alt="équipage du wayfarer" />
+    <figcaption>Elsa Varland<a href="https://elsavarland.carrd.co/">https://elsavarland.carrd.co/</a></figcaption>
+  </div>
+
+  <div>
+    <img srcset="
+        http://localhost:4000/assets/images/crew/wayfarer2-sm.jpg  640w,
+        http://localhost:4000/assets/images/crew/wayfarer2-md.jpg  768w,
+        http://localhost:4000/assets/images/crew/wayfarer2-lg.jpg  1024w,
+      " sizes="(max-width: 640px) 100vw,
+            (max-width: 768px) 100vw, 
+            1024px" src="http://localhost:4000/assets/images/crew/wayfarer2-lg.jpg" alt="équipage du wayfarer" />
+      <figcaption>@SebastianPiriz <a href="https://bio.site/sebastianpiriz">https://bio.site/sebastianpiriz</a></figcaption>
+
+  </div>
+  <div>
+    <img srcset="
+      http://localhost:4000/assets/images/crew/wayfarer4-sm.jpg  640w,
+      http://localhost:4000/assets/images/crew/wayfarer4-md.jpg  768w,
+      http://localhost:4000/assets/images/crew/wayfarer4-lg.jpg  1024w,
+    " sizes="(max-width: 640px) 100vw,
+          (max-width: 768px) 100vw, 
+          1024px" src="http://localhost:4000/assets/images/crew/wayfarer4-lg.jpg" alt="équipage du wayfarer" />
+    <figcaption>fanart by worstpiel: <a href="ko-fi.com/wortspiel">ko-fi</a> <a href="thekawaiifruitworld.tumblr.com">tumblr</a> </figcaption>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+<section id="content-section1" class="hidden">
+    
+    
+    
+    <h1>Wayfarers</h1>
+    
+    <p>Auteur : Becky Chambers</p>
+        <div class="float">
+            
+            <div class="float-left">
+                <img src="http://localhost:4000/assets/images/books/en/wayfarers.jpg" alt="Couverture du livre">
+            </div>
+            
+            <div>
+                <p>the Wayfarers series by Becky Chambers follows a crew aboard the spaceship Wayfarer, navigating the vastness of space and diverse cultures. This character-driven cosy sci-fi focuses on relationships, acceptance, and coexistence, rather than traditional space conflicts, offering a warm and hopeful view of future societies.</p>
+
+<ul>
+  <li>The Long Way to a Small, Angry Planet</li>
+  <li>A Closed and Common Orbit</li>
+  <li>Record of a Spaceborn Few</li>
+  <li>
+    <p>The Galaxy, and the Ground Within</p>
+  </li>
+  <li>Winner of the 2019 Hugo Award for Best Series<br /></li>
+</ul>
+
+<p>Becky Chambers’s website : <a href="http://www.otherscribbles.com">http://www.otherscribbles.com</a></p>
+
+            </div>
+        </div>
+    
+</section>
+
+
+<section class="pagination">
+  
+
+  
+    <a href="http://localhost:4000/puzzles/en/puzzle2.html" class="next button">NEXT</a>
+  
+</section>
+
+
+<script>
+    // Check if the page was already unlocked
+    if (localStorage.getItem('islocked'+'1') === "false") {
+        document.getElementById('lock-section'+'1').classList.replace("visible", "hidden");
+        document.getElementById('content-section'+'1').classList.replace("hidden", "visible");
+    }
+function unlockPage(number, password) {
+  const inputPassword = document.getElementById(`password-input${number}`).value;
+  cleanedpassword = inputPassword.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g,'').toLowerCase();
+  if (cleanedpassword === password) {
+      // Store in localStorage that this page is unlocked
+      localStorage.setItem(`islocked${number}`, "false");
+      
+      // Hide the lock section and show the content
+      document.getElementById(`lock-section${number}`).classList.replace("visible", "hidden")
+      document.getElementById(`content-section${number}`).classList.replace("hidden", "visible")
+  } else {
+      // Show error message
+      document.getElementById(`error-message${number}`).classList.replace("hidden", "visible")
+  }
+}
+</script>
+
+    </main>
+    <footer class="bg-color-primary">
+    <div class="grid">
+        <p>© 2024 Captain Medusa</p>
+    </div>
+</footer>
+  </body>
+</html>

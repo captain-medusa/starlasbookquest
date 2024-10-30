@@ -1,0 +1,44 @@
+<nav class="flex-space-between">
+  <div>
+        {% if page.url contains 'fr' %}
+        <a href="{{ '/fr/home' | absolute_url }}">
+          Accueil
+        </a>      
+        {% elsif page.url contains 'en' %}
+        <a href="{{ '/en/home' | absolute_url }}">
+          Home
+        </a>
+        {% endif %}
+
+      <a href="{{ '/about' | absolute_url }}" {% if page.url == item.link %}class="current"{% endif %}>
+        {% if page.url contains 'fr' %}
+        À propos
+        {% elsif page.url contains 'en' %}
+        About
+        {% endif %}
+      </a>
+  </div>
+  <div>
+    {% assign lang = "" %}
+    {% assign other-lang-url = "" %}
+
+    {% if page.url contains 'fr' %}
+        {% assign other-lang-url = page.url | replace: 'fr', 'en' %}
+        {% assign lang = 'fr' %}
+    {% elsif page.url contains 'en' %}
+        {% assign other-lang-url = page.url | replace: 'en', 'fr' %}
+        {% assign lang = 'en' %}
+    {% endif %}
+
+    <!-- Display the link if the other language URL was found -->
+    {% if other-lang-url != "" %}
+        <a href="{{ other-lang-url | absolute_url }}">
+            {% if lang == 'fr' %}
+                English
+            {% elsif lang == 'en' %}
+                Français
+            {% endif %}
+        </a>
+    {% endif %}
+  </div>
+</nav>

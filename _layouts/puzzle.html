@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<h3>{{ page.title }}</h3>
+
+<section class="visible lock-section" id="lock-section{{page.number}}">
+  {% if page.lang == 'fr' %}
+  <p>En trouvant le mot de passe, vous débloquerez un nouveau livre dans la bibliothèque de Starla.</p>
+  {% elsif page.lang == 'en' %}
+  <p>Find the password to unlock a new book in Starla's library</p>
+  {% endif %}
+  <p>{{page.clue}}</p>
+  <div class="grid grid-2up">
+    <input type="text" id="password-input{{page.number}}" placeholder="Enter password">
+    <button class="button" onclick="unlockPage('{{ page.number }}', '{{ page.password }}')">Unlock</button>
+  </div>
+  <p id="error-message{{page.number}}" class="hidden error-message">Mot de passe incorrect, essaye encore !</p>
+</section>
+
+{% assign filtered_posts_lang = site.posts | where: 'lang', page.lang %}
+{% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
+{% include filtered-posts.html puzzle_posts = filtered_posts_puzzle %}
+{% assign filtered_posts_puzzle = filtered_posts_lang | where: 'puzzle-number', page.number %}
+
+{% assign page-number = page.number %}
+{% assign page-lang = page.lang %}
+{% include book.html page-number = page-number page-lang = page-lang %}
+
+
+<section class="pagination">
+  {% if page.previous-page %}
+    <a href="{{ page.previous-page | absolute_url }}" class="previous button">PREVIOUS</a>
+  {% endif %}
+
+  {% if page.next-page %}
+    <a href="{{ page.next-page | absolute_url}}" class="next button">NEXT</a>
+  {% endif %}
+</section>
+
+
+<script>
+    // Check if the page was already unlocked
+    if (localStorage.getItem('islocked'+'{{page.number}}') === "false") {
+        document.getElementById('lock-section'+'{{page.number}}').classList.replace("visible", "hidden");
+        document.getElementById('content-section'+'{{page.number}}').classList.replace("hidden", "visible");
+    }
+function unlockPage(number, password) {
+  const inputPassword = document.getElementById(`password-input${number}`).value;
+  cleanedpassword = inputPassword.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g,'').toLowerCase();
+  if (cleanedpassword === password) {
+      // Store in localStorage that this page is unlocked
+      localStorage.setItem(`islocked${number}`, "false");
+      
+      // Hide the lock section and show the content
+      document.getElementById(`lock-section${number}`).classList.replace("visible", "hidden")
+      document.getElementById(`content-section${number}`).classList.replace("hidden", "visible")
+  } else {
+      // Show error message
+      document.getElementById(`error-message${number}`).classList.replace("hidden", "visible")
+  }
+}
+</script>

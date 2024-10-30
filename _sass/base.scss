@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url(../fonts/OpenDyslexic3-Regular.ttf);
+}
+
+:root {
+/* Type*/
+--step--1: clamp(0.8889rem, 0.873rem + 0.0794vw, 1rem);
+--step-0: clamp(1rem, 0.9643rem + 0.1786vw, 1.25rem);
+--step-1: clamp(1.125rem, 1.0625rem + 0.3125vw, 1.5625rem);
+--step-2: clamp(1.2656rem, 1.1674rem + 0.4911vw, 1.9531rem);
+--step-3: clamp(1.4238rem, 1.2785rem + 0.7268vw, 2.4414rem);
+--step-4: clamp(1.6018rem, 1.3947rem + 1.0357vw, 3.0518rem);
+--step-5: clamp(1.802rem, 1.5145rem + 1.4376vw, 3.8147rem);
+--step-6: clamp(2.0273rem, 1.6357rem + 1.9579vw, 4.7684rem);
+
+/* Space */
+--space-3xs: clamp(0.25rem, 0.2411rem + 0.0446vw, 0.3125rem);
+--space-2xs: clamp(0.5rem, 0.4821rem + 0.0893vw, 0.625rem);
+--space-xs: clamp(0.75rem, 0.7232rem + 0.1339vw, 0.9375rem);
+--space-s: clamp(1rem, 0.9643rem + 0.1786vw, 1.25rem);
+--space-m: clamp(1.5rem, 1.4464rem + 0.2679vw, 1.875rem);
+--space-l: clamp(2rem, 1.9286rem + 0.3571vw, 2.5rem);
+--space-xl: clamp(3rem, 2.8929rem + 0.5357vw, 3.75rem);
+--space-2xl: clamp(4rem, 3.8571rem + 0.7143vw, 5rem);
+--space-3xl: clamp(6rem, 5.7857rem + 1.0714vw, 7.5rem);
+
+/* One-up pairs */
+--space-3xs-2xs: clamp(0.25rem, 0.1964rem + 0.2679vw, 0.625rem);
+--space-2xs-xs: clamp(0.5rem, 0.4375rem + 0.3125vw, 0.9375rem);
+--space-xs-s: clamp(0.75rem, 0.6786rem + 0.3571vw, 1.25rem);
+--space-s-m: clamp(1rem, 0.875rem + 0.625vw, 1.875rem);
+--space-m-l: clamp(1.5rem, 1.3571rem + 0.7143vw, 2.5rem);
+--space-l-xl: clamp(2rem, 1.75rem + 1.25vw, 3.75rem);
+--space-xl-2xl: clamp(3rem, 2.7143rem + 1.4286vw, 5rem);
+--space-2xl-3xl: clamp(4rem, 3.5rem + 2.5vw, 7.5rem);
+  
+/* Grid */
+--grid-max-width: 77.50rem;
+--grid-gutter: var(--space-s-l, clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem));
+--grid-columns: 12;
+}
+.grid {
+  display: grid;
+  gap: var(--grid-gutter);
+  &.no-gap {
+      gap:0;
+  }
+}
+.grid-2up {
+  @media all and (min-width: 40rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid-1-to-3up {
+  @media all and (min-width: 50rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.grid-1-to-4up {
+  @media all and (min-width: 60rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.grid-1-to-5up {
+  @media all and (min-width: 70rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+.grid-2-to-4up {
+  @media all and (min-width: 60rem) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+/* Colors */
+$backgroundColor: #EFEEEA;
+$text-color: #1a1813;
+$secondary-color: #505245;
+$on-secondary-color: #EFEEEA;
+$error-color: #F64740;
+$highlight-color: #ffdf80;
+// Define defaults for each variable.
+
+$base-font-family: "OpenDyslexic",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+
+/**
+ * Basic styling
+ */
+body {
+  font-family: $base-font-family;
+  font-size: var(--step-0);
+  font-weight: 400;
+  line-height: 1.8;
+  color: $text-color;
+  background-color: $backgroundColor;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  margin: auto;
+  color: $secondary-color;
+}
+h1 {
+  font-size: var(--step-6);
+}
+h2 {
+  font-size: var(--step-5);
+}
+h3 {
+  font-size: var(--step-4);
+}
+h4 {
+  font-size: var(--step-3);
+}
+h5 {
+  font-size: var(--step-2);
+}
+h6 {
+  font-size: var(--step-1);
+}

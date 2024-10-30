@@ -1,0 +1,19 @@
+<section id="content-section{{ include.page-number }}" class="hidden">
+    {% assign filtered_books_lang = site.books | where: 'lang', include.page-lang %}
+    {% assign filtered_books_num = filtered_books_lang | where: 'book-number', include.page-number %}
+    {% for book in filtered_books_num %}
+    {% if book.title %}<h1>{{ book.title }}</h1>{% endif %}
+    {% if book.original-title %}<p>Titre original : {{ book.original-title }}</p>{% endif %}
+    {% if book.author %}<p>Auteur : {{ book.author }}</p>{% endif %}
+        <div class="float">
+          {% if book.img-url %}  
+            <div class="float-left">
+                <img src="{{ book.img-url | absolute_url }}" alt="Couverture du livre">
+            </div>
+            {% endif %}
+            <div>
+                {{ book.content | markdownify }}
+            </div>
+        </div>
+    {% endfor %}
+</section>

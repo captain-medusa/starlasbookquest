@@ -1,0 +1,6 @@
+{% for post in {{include.puzzle_posts}} %}
+<section>
+  <h4>{{ post.title }}</h4>
+  <div>{{ post.content | markdownify }}</div>
+</section>
+{% endfor %}

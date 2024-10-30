@@ -1,0 +1,47 @@
+title: Rebel Queen Starla’s Bookquest
+email: captain.medusa@proton.me
+description: >- # this means to ignore newlines until "baseurl:"
+  Blog littéraire de SFFF&F : science-fiction, fantasy, fantastique & feminisme !
+baseurl: "" # the subpath of your site, e.g. /starlasbookquest
+url: "" # the base hostname & protocol for your site, e.g. https://gwenananaelle.github.io
+lang: fr 
+languages: ["en", "fr"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  puzzles:
+    output: true
+    render_with_liquid: true
+  books:
+    output: true
+    render_with_liquid: true
+
+defaults:
+  - scope:
+      path: '_puzzles/en'
+      type: 'puzzles'
+    values:
+      layout: 'puzzle'
+  - scope:
+      path: '_puzzles/fr'
+      type: 'puzzles'
+    values:
+      layout: 'puzzle'
+  - scope:
+      path: ''
+      type: 'books'
+    values:
+      layout: 'post'
+  - scope:
+      path: '_posts/en'
+      type: 'posts'
+    values:
+      layout: 'post'
+  - scope:
+      path: '_posts/fr'
+      type: 'posts'
+    values:
+      layout: 'post'

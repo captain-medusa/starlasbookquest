@@ -1,0 +1,24 @@
+<div class="grid grid-1-to-3up grid-1-to-4up">
+    {% assign crew_data = "" %}
+
+    <!-- Assign the correct data based on the language -->
+    {% if page.path contains 'fr' %}
+        {% assign crew_data = site.data.crew.fr %}
+    {% elsif page.path contains 'en' %}
+        {% assign crew_data = site.data.crew.en %}
+    {% else %}
+        {% assign crew_data = site.data.crew.en %}
+    {% endif %}
+
+    <!-- Loop through the crew data -->
+    {% for item in crew_data %}
+        <div>
+            <h5>{{ item.name }}</h5>
+            <ul>
+                {% for entry in item.subfolderitems %}
+                    <li class="font-small">{{ entry.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>

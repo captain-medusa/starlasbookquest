@@ -1,0 +1,94 @@
+---
+fr:
+- name: Arzt
+  subfolderitems:
+    - description: Joues en forme de ballon
+    - description: Six membres
+    - description: Porte un t-shirt avec un logo vert et un pantalon.
+
+- name: Elsix
+  subfolderitems:
+    - description: Écailles vertes mousse qui s'estompent en une teinte plus pâle sur son ventre.
+    - description: Pas de nez, pas de lèvres, pas d'oreilles
+    - description: Crinière de plumes multicolores
+
+- name: Heloïse
+  subfolderitems:
+    - description: Cheveux noirs attachés en chignon avec un ruban
+    - description: Porte une combinaison orange
+    - description: Notes manuscrites hâtives griffonnées sur les manches
+
+- name: Robin
+  subfolderitems:
+    - description: Pratiquement rose
+    - description: Homme
+
+- name: San
+  subfolderitems:
+    - description: Marche à quatre pattes avec de longs doigts
+    - description: Dos courbé, recouvert d'une fourrure bleu glacier
+    - description: Énormes yeux humides à longues paupières
+
+- name: Cain
+  subfolderitems:
+    - description: Petit et trapu
+    - description: Côté de la tête rasé, avec une touffe de boucles au sommet
+    - description: Tatouages et piercings
+
+- name: Bobby
+  subfolderitems:
+    - description: Boucles noires serrées
+    - description: Peau ambrée
+
+- name: Marirose
+  subfolderitems:
+    - description: Peau cuivrée, plus claire que celle de Cain
+    - description: Plus petite qu'Elsix
+    - description: Cheveux bruns bouclés
+
+en:
+- name: Arzt
+  subfolderitems:
+    - description: Balloon-like cheeks
+    - description: six limbs
+    - description: Wears a short-sleeve shirt with a green logo and pants
+
+- name: Elsix
+  subfolderitems:
+    - description: Lithe and lean, with moss green scales fading into a paler shade over her belly
+    - description: No nose, no lips, no ears
+    - description: Multicolored feathered mane
+
+- name: Heloïse
+  subfolderitems:
+    - description: Black hair tied in a bun with a ribbon
+    - description: Wears an orange jumpsuit
+    - description: Hasty handwritten notes scribbled on the sleeves
+
+- name: Robin
+  subfolderitems:
+    - description: Practically pink
+    - description: Male
+
+- name: San
+  subfolderitems:
+    - description: Walks on all fours with long fingers
+    - description: Back bowed, covered in ice-blue fur
+    - description: Enormous, long-lashed wet eyes
+
+- name: Cain
+  subfolderitems:
+    - description: Small and stocky
+    - description: Side of his head shaved, with a tuft of curls atop his scalp
+    - description: Tatoos and piercings
+
+- name: Bobby
+  subfolderitems:
+    - description: Tight black curls
+    - description: Amber skin
+
+- name: Marirose
+  subfolderitems:
+    - description: Copper skin, lighter than Cain
+    - description: A head smaller than Elsix
+    - description: Curly brown hair
